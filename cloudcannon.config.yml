@@ -1,0 +1,59 @@
+paths:
+  data: data
+  collections: content
+  layouts: layouts
+  static: static
+  uploads: static/images
+  source: ''
+  assets: assets
+  content: content
+  pages: content
+  config: ''
+collections_config:
+  pages:
+    path: content
+    output: true
+    filter: strict
+    parse_branch_index: true
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  data:
+    path: data
+    output: false
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+_inputs:
+  page_description:
+    comment: If empty, defaults to the description set in the Site SEO data file
+    type: text
+  canonical_url:
+    comment: If empty, defaults to the URL of the page
+    type: text
+  featured_image:
+    comment: If empty, defaults to the image set in the Site SEO data file
+    type: image
+  author_twitter_handle:
+    type: twitter
+    comment: Defaults to the twitter site value set in the Site SEO data file
+  no_index:
+    type: checkbox
+    comment: When selected this removes the page from your sitemap and adds the noindex robots meta tag
+  open_graph_type:
+    type: select
+    options:
+      values:
+        - website
+        - article
+        - profile
+  favicon_icon:
+    type: image
+    comment: For the shortcut icon meta tag
+  favicon_image:
+    type: image
+    comment: For the icon meta tag
+_editables: {}
+timezone: Etc/UTC

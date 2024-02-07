@@ -1,0 +1,110 @@
+.header {
+  position: relative;
+  min-height: 3.25rem;
+  position: relative;
+  z-index: 11;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    max-width: $max-width-xl;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    max-height: 80px;
+    max-width: 80px;
+    margin-left: 16px;
+    order: 2;
+
+    @media screen and (min-width: $max-width-xl) {
+      order: 1;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width: $max-width-xl) {
+      order: 2;
+      width: 100%;
+    }
+  }
+
+  &__nav-list {
+    display: none;
+
+    @media screen and (min-width: $max-width-xl) {
+      position: static;
+      display: flex;
+      padding: 0;
+      color: #ffffff;
+      width: 100%;
+      justify-content: space-between;
+      padding-inline: 3rem;
+
+      a {
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  &__nav-list-item {
+    display: flex;
+
+    img {
+      width: 0.9rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__nav-list-mobile {
+    position: absolute;
+    z-index: 99;
+    top: 76px;
+    right: 0;
+    left: 0;
+
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0 0 0 4px;
+    font-family: $font-primary;
+    letter-spacing: 1.2;
+    color: text;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    @media screen and (min-width: $max-width-xl) {
+      display: none !important;
+    }
+  }
+
+  &__hamburger {
+    display: block;
+    border: none;
+    background: none;
+
+    @media screen and (min-width: $max-width-xl) {
+      display: none;
+    }
+  }
+
+  &__login {
+    color: #ffffff;
+    align-self: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+    display: flex;
+    order: 3;
+  }
+}
